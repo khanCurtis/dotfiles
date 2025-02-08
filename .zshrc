@@ -110,4 +110,6 @@ alias grep='grep --color=auto'
 
 neofetch
 
+sudo pacman -Syu
+
 . "$HOME/.cargo/env"
