@@ -108,8 +108,8 @@ eval "$(starship init zsh)"
 alias ls='exa --icons -F -H --group-directories-first --git -1'
 alias grep='grep --color=auto'
 
-neofetch
+tmux
 
-sudo pacman -Syu
+neofetch
 
 . "$HOME/.cargo/env"
