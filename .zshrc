@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="alanpeabody"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,9 +107,26 @@ eval "$(starship init zsh)"
 
 alias ls='exa --icons -F -H --group-directories-first --git -1'
 alias grep='grep --color=auto'
-
-tmux
+alias githammer='git add . && git commit -m "commit" && git push'
+alias cargohammer='cargo clean && cargo build'
+alias venvhammer='python3 venv venv && source venv/bin/activate'
 
 neofetch
 
 . "$HOME/.cargo/env"
+export GITHUB_TOKEN=""
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/pwner/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/pwner/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/pwner/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/pwner/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
