@@ -111,6 +111,7 @@ alias githammer='git add . && git commit -m "commit" && git push'
 alias cargohammer='cargo clean && cargo run'
 alias venvhammer='python3 venv venv && source venv/bin/activate'
 
+tmux
 neofetch
 
 . "$HOME/.cargo/env"
