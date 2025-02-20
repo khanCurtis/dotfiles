@@ -107,7 +107,7 @@ eval "$(starship init zsh)"
 
 alias ls='exa --icons -F -H --group-directories-first --git -1'
 alias grep='grep --color=auto'
-alias githammer='git pull && git add . && git commit -m "commit via console" && git push'
+alias githammer='git pull && git add . && git commit -m "commit via shell" && git push'
 alias cargohammer='cargo clean && cargo run'
 alias venvhammer='python3 venv venv && source venv/bin/activate'
 
