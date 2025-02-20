@@ -111,7 +111,13 @@ alias githammer='git add . && git commit -m "commit" && git push'
 alias cargohammer='cargo clean && cargo run'
 alias venvhammer='python3 venv venv && source venv/bin/activate'
 
-tmux
+if [ -z "$TMUX" ]; then
+    /home/pwner/Desktop/myCode/Rust/tmux_killer/target/release/tmux_killer
+fi
+
+if command -v tmux > /dev/null 2>&1 && [ -z "$TMUX" ]; then
+    tmux attach || tmux new
+fi
 neofetch
 
 . "$HOME/.cargo/env"
