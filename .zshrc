@@ -70,7 +70,12 @@ ZSH_THEME="alanpeabody"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions)
+plugins=(
+        zsh-syntax-highlighting
+        zsh-autosuggestions
+        rust
+        git
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,14 +107,15 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-#
+
 eval "$(starship init zsh)"
+eval $(thefuck --alias)
 
 alias ls='exa --icons -F -H --group-directories-first --git -1'
 alias grep='grep --color=auto'
 alias githammer='git pull && git add . && git commit -m "commit via shell" && git push'
 alias cargohammer='cargo clean && cargo run'
-alias venvhammer='python3 venv venv && source venv/bin/activate'
+alias venvhammer='python3 -m venv venv && source ~/venv/bin/activate'
 
 if [ -z "$TMUX" ]; then
     /home/pwner/Desktop/myCode/Rust/tmux_killer/target/release/tmux_killer
@@ -118,7 +124,7 @@ fi
 if command -v tmux > /dev/null 2>&1 && [ -z "$TMUX" ]; then
     tmux attach || tmux new
 fi
-neofetch
+fastfetch
 
 . "$HOME/.cargo/env"
 export GITHUB_TOKEN=""
