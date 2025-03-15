@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -8,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="alanpeabody"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -71,10 +78,10 @@ ZSH_THEME="alanpeabody"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-        zsh-syntax-highlighting
-        zsh-autosuggestions
-        rust
-        git
+	zsh-syntax-highlighting
+	zsh-autosuggestions
+	rust
+	git
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -107,8 +114,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-eval "$(starship init zsh)"
 eval $(thefuck --alias)
 
 alias ls='exa --icons -F -H --group-directories-first --git -1'
@@ -116,6 +121,14 @@ alias grep='grep --color=auto'
 alias githammer='git pull && git add . && git commit -m "commit via shell" && git push'
 alias cargohammer='cargo clean && cargo run'
 alias venvhammer='python3 -m venv venv && source ~/venv/bin/activate'
+alias vi='vim'
+
+. "$HOME/.cargo/env"
+export GITHUB_TOKEN=""
+
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 if [ -z "$TMUX" ]; then
     /home/pwner/Desktop/myCode/Rust/tmux_killer/target/release/tmux_killer
@@ -125,9 +138,6 @@ if command -v tmux > /dev/null 2>&1 && [ -z "$TMUX" ]; then
     tmux attach || tmux new
 fi
 fastfetch
-
-. "$HOME/.cargo/env"
-export GITHUB_TOKEN=""
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
