@@ -120,6 +120,7 @@ eval $(thefuck --alias)
 alias ls='exa --icons -F -H --group-directories-first --git'
 alias grep='grep --color=auto'
 alias githammer='git pull && git add . && git commit -m "commit via shell" && git push'
+alias clone='cd ~/Desktop/Git && git clone'
 alias cargohammer='cargo clean && cargo run'
 alias venvhammer='python3 -m venv venv && source ~/venv/bin/activate'
 alias vi='nvim'
