@@ -79,10 +79,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	zsh-syntax-highlighting
-	zsh-autosuggestions
-	rust
-	git
+        zsh-syntax-highlighting
+        zsh-autosuggestions
+        rust
+        git
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -119,12 +119,11 @@ eval $(thefuck --alias)
 
 alias ls='exa --icons -F -H --group-directories-first --git'
 alias grep='grep --color=auto'
-alias githammer='git pull && git add . && git commit -m "commit via shell" && git push'
+alias githammer='read -p "Commit Message: " msg; git add . && git commit -m "$msg" && git push'
 alias clone='cd ~/Desktop/Git && git clone'
-alias cargohammer='cargo clean && cargo run'
+alias cargohammer='cargo clean && cargo build && cargo run'
 alias venvhammer='python3 -m venv venv && source ~/venv/bin/activate'
-alias vi='nvim'
-alias sysupdate='sudo pacman -Syu'
+alias vi='vim'
 
 . "$HOME/.cargo/env"
 export GITHUB_TOKEN=""
@@ -133,9 +132,9 @@ export GITHUB_TOKEN=""
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-if [ -z "$TMUX" ]; then
-    /home/pwner/Desktop/Code/Rust/tmux_killer/target/release/tmux_killer
-fi
+#if [ -z "$TMUX" ]; then
+#    /home/pwner/Desktop/Code/Rust/tmux_killer/target/release/tmux_killer
+#fi
 
 if command -v tmux > /dev/null 2>&1 && [ -z "$TMUX" ]; then
     tmux attach || tmux new
@@ -156,3 +155,5 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=${DEVKITPRO}/devkitARM
