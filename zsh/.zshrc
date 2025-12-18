@@ -23,7 +23,6 @@ export SUDO_EDITOR="$EDITOR"
 export PGHOST="/var/run/postgresql"
 export PATH=$PATH:/usr/local/go/bin
 export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$HOME/.local/share/omarchy/bin:$PATH"
-eval "$(~/.local/bin/mise activate zsh)"
 
 # History
 HISTFILE=~/.history
