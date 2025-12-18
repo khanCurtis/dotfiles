@@ -58,8 +58,8 @@ $character
 # Prompt Character
 # -------------------------------------------------
 [character]
-success_symbol = "[❯](bold green) "
-error_symbol   = "[❯](bold red) "
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
 
 # -------------------------------------------------
 # User / Host
@@ -224,7 +224,9 @@ symbol = "󰍛 "
 # OS Logos
 # -------------------------------------------------
 [os]
-symbol = " "  # fallback symbol
+format = "[$symbol]($style)"
+style = "bold white"
+disabled = false
 
 [os.symbols]
 Alpaquita = " "
