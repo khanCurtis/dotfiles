@@ -72,7 +72,7 @@ disabled = false
 show_always = true
 
 [hostname]
-ssh_only = true
+ssh_only = false
 style = "bold yellow"
 format = "[@$hostname]($style) "
 
