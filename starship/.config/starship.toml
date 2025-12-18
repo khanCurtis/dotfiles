@@ -12,50 +12,50 @@ $hostname\
 $directory\
 $git_branch\
 $git_status\
-"c"\
-crystal\
-dart\
-elixir\
-elm\
-fennel\
-golang\
-haskell\
-haxe\
-julia\
-java\
-kotlin\
-lua\
-nim\
-ocaml\
-perl\
-php\
-python\
-rlang\
-ruby\
-rust\
-scala\
-swift\
-zig\
-cmake\
-gradle\
-meson\
-nix_shell\
-guix_shell\
-pijul_channel\
-conda\
-nodejs\
-docker_context\
-aws\
-fastfetch\
-starship\
-memory_usage\
+$c\
+$crystal\
+$dart\
+$elixir\
+$elm\
+$fennel\
+$golang\
+$haskell\
+$haxe\
+$julia\
+$java\
+$kotlin\
+$lua\
+$nim\
+$ocaml\
+$perl\
+$php\
+$python\
+$rlang\
+$ruby\
+$rust\
+$scala\
+$swift\
+$zig\
+$cmake\
+$gradle\
+$meson\
+$nix_shell\
+$guix_shell\
+$pijul_channel\
+$conda\
+$nodejs\
+$docker_context\
+$aws\
+$fastfetch\
+$starship\
+$memory_usage\
 $cmd_duration\
 $time
 $character
 """
 
 # -------------------------------------------------
-# Prompt Character (bottom line)
+# Prompt Character
 # -------------------------------------------------
 [character]
 success_symbol = "[❯](bold green) "
@@ -98,110 +98,112 @@ tag_symbol = "  "
 [git_status]
 
 # -------------------------------------------------
-# Languages / Tools
-# -------------------------------------------------
-
 # Programming Languages
-["c"]
-symbol = ""
+# -------------------------------------------------
+[c]
+symbol = " "
 
 [crystal]
-symbol = ""
+symbol = " "
 
 [dart]
-symbol = ""
+symbol = " "
 
 [elixir]
-symbol = ""
+symbol = " "
 
 [elm]
-symbol = ""
+symbol = " "
 
 [fennel]
-symbol = ""
+symbol = " "
 
 [golang]
-symbol = ""
+symbol = " "
 
 [haskell]
-symbol = ""
+symbol = " "
 
 [haxe]
-symbol = ""
+symbol = " "
 
 [julia]
-symbol = ""
+symbol = " "
 
 [java]
-symbol = ""
+symbol = " "
 
 [kotlin]
-symbol = ""
+symbol = " "
 
 [lua]
-symbol = ""
+symbol = " "
 
 [nim]
-symbol = "󰆥"
+symbol = "󰆥 "
 
 [ocaml]
-symbol = ""
+symbol = " "
 
 [perl]
-symbol = ""
+symbol = " "
 
 [php]
-symbol = ""
+symbol = " "
 
 [python]
-symbol = ""
+symbol = " "
 
 [rlang]
-symbol = "󰟔"
+symbol = "󰟔 "
 
 [ruby]
-symbol = ""
+symbol = " "
 
 [rust]
-symbol = "󱘗"
+symbol = "󱘗 "
 
 [scala]
-symbol = ""
+symbol = " "
 
 [swift]
-symbol = ""
+symbol = " "
 
 [zig]
-symbol = ""
+symbol = " "
 
+# -------------------------------------------------
 # Build / Package Tools
+# -------------------------------------------------
 [cmake]
-symbol = ""
+symbol = " "
 
 [gradle]
-symbol = ""
+symbol = " "
 
 [meson]
-symbol = "󰔷"
+symbol = "󰔷 "
 
 [nix_shell]
-symbol = ""
+symbol = " "
 
 [guix_shell]
-symbol = ""
+symbol = " "
 
 [pijul_channel]
-symbol = ""
+symbol = " "
 
 [conda]
-symbol = ""
+symbol = " "
 
+# -------------------------------------------------
 # Runtime / Environment
+# -------------------------------------------------
 [nodejs]
-symbol = ""
+symbol = " "
 
 [docker_context]
-symbol = ""
+symbol = " "
 
 [fastfetch]
 disabled = false
@@ -210,61 +212,63 @@ disabled = false
 disabled = false
 
 [aws]
-symbol = ""
+symbol = " "
 
+# -------------------------------------------------
 # System / Misc
+# -------------------------------------------------
 [memory_usage]
-symbol = "󰍛"
+symbol = "󰍛 "
 
 # -------------------------------------------------
 # OS Logos
 # -------------------------------------------------
 [os]
-symbol = ""  # fallback symbol if OS not detected
+symbol = " "  # fallback symbol
 
 [os.symbols]
-Alpaquita = ""
-Alpine = ""
-AlmaLinux = ""
-Amazon = ""
-Android = ""
+Alpaquita = " "
+Alpine = " "
+AlmaLinux = " "
+Amazon = " "
+Android = " "
 Arch = ""
-Artix = ""
-CachyOS = ""
-CentOS = ""
-Debian = ""
-DragonFly = ""
-Emscripten = ""
-EndeavourOS = ""
-Fedora = ""
-FreeBSD = ""
-Garuda = "󰛓"
-Gentoo = ""
-HardenedBSD = "󰞌"
-Illumos = "󰈸"
-Kali = ""
-Linux = ""
-Mabox = ""
-Macos = ""
-Manjaro = ""
-Mariner = ""
-MidnightBSD = ""
-Mint = ""
-NetBSD = ""
-NixOS = ""
-Nobara = ""
-OpenBSD = "󰈺"
-openSUSE = ""
-OracleLinux = "󰌷"
-Pop = ""
-Raspbian = ""
-Redhat = ""
-RedHatEnterprise = ""
-RockyLinux = ""
-Redox = "󰀘"
-Solus = "󰠳"
-SUSE = ""
-Ubuntu = ""
-Unknown = ""
-Void = ""
-Windows = "󰍲"
+Artix = " "
+CachyOS = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Kali = " "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+Nobara = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+RockyLinux = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Void = " "
+Windows = "󰍲 "
