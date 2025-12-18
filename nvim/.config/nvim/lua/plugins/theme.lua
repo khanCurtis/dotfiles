@@ -1,0 +1,1 @@
+/home/pwner/.config/omarchy/current/theme/neovim.lua

@@ -4,76 +4,42 @@
 add_newline = true
 command_timeout = 1000
 
-# Prompt format
 format = """
 $username\
 $hostname\
 $directory\
 $git_branch\
 $git_status\
-$c\
-$crystal\
-$dart\
-$elixir\
-$elm\
-$fennel\
-$golang\
-$haskell\
-$haxe\
-$julia\
-$java\
-$kotlin\
-$lua\
-$nim\
-$ocaml\
-$perl\
-$php\
-$python\
-$rlang\
-$ruby\
-$rust\
-$scala\
-$swift\
-$zig\
-$cmake\
-$gradle\
-$meson\
-$nix_shell\
-$guix_shell\
-$pijul_channel\
-$conda\
 $nodejs\
+$python\
+$rust\
+$golang\
+$java\
 $docker_context\
-$aws\
-$fastfetch\
-$starship\
-$memory_usage\
 $cmd_duration\
 $time
-$os$character
+$character
 """
 
 # -------------------------------------------------
-# Prompt Character
+# Prompt Character (bottom line)
 # -------------------------------------------------
 [character]
-success_symbol = "[❯](bold green)"
-error_symbol = "[❯](bold red)"
+success_symbol = "[❯](bold green) "
+error_symbol   = "[❯](bold red) "
 
 # -------------------------------------------------
 # User / Host
 # -------------------------------------------------
 [username]
-style_user = 'white bold'
-style_root = 'black bold'
-format = '[$user @ ]($style)'
-disabled = false
+style_user = "bold cyan"
 show_always = true
+format = "[$user]($style) "
 
 [hostname]
-ssh_only = false
+ssh_only = true
 style = "bold yellow"
-format = "[$hostname]($style) "
+format = "[@$hostname]($style) "
 
 # -------------------------------------------------
 # Directory
@@ -82,194 +48,9 @@ format = "[$hostname]($style) "
 style = "bold blue"
 truncation_length = 3
 truncate_to_repo = true
-read_only = " 󰌾"
-format = "in [$path]($style) "
+format = "[$path]($style) "
 
 # -------------------------------------------------
 # Git
-# -------------------------------------------------
-[git_branch]
-symbol = " "
+# ----------
 
-[git_commit]
-tag_symbol = "  "
-
-[git_status]
-
-# -------------------------------------------------
-# Programming Languages
-# -------------------------------------------------
-[c]
-symbol = " "
-
-[crystal]
-symbol = " "
-
-[dart]
-symbol = " "
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-[fennel]
-symbol = " "
-
-[golang]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[haxe]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[java]
-symbol = " "
-
-[kotlin]
-symbol = " "
-
-[lua]
-symbol = " "
-
-[nim]
-symbol = "󰆥 "
-
-[ocaml]
-symbol = " "
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
-
-[python]
-symbol = " "
-
-[rlang]
-symbol = "󰟔 "
-
-[ruby]
-symbol = " "
-
-[rust]
-symbol = "󱘗 "
-
-[scala]
-symbol = " "
-
-[swift]
-symbol = " "
-
-[zig]
-symbol = " "
-
-# -------------------------------------------------
-# Build / Package Tools
-# -------------------------------------------------
-[cmake]
-symbol = " "
-
-[gradle]
-symbol = " "
-
-[meson]
-symbol = "󰔷 "
-
-[nix_shell]
-symbol = " "
-
-[guix_shell]
-symbol = " "
-
-[pijul_channel]
-symbol = " "
-
-[conda]
-symbol = " "
-
-# -------------------------------------------------
-# Runtime / Environment
-# -------------------------------------------------
-[nodejs]
-symbol = " "
-
-[docker_context]
-symbol = " "
-
-[fastfetch]
-disabled = false
-
-[starship]
-disabled = false
-
-[aws]
-symbol = " "
-
-# -------------------------------------------------
-# System / Misc
-# -------------------------------------------------
-[memory_usage]
-symbol = "󰍛 "
-
-# -------------------------------------------------
-# OS Logos
-# -------------------------------------------------
-[os]
-format = "[$symbol]($style)"
-style = "bold white"
-disabled = false
-
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-Arch = ""
-Artix = " "
-CachyOS = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-Nobara = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
