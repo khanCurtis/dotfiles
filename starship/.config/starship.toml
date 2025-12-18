@@ -6,7 +6,6 @@ command_timeout = 1000
 
 # Prompt format
 format = """
-$os\
 $username\
 $hostname\
 $directory\
@@ -51,7 +50,7 @@ $starship\
 $memory_usage\
 $cmd_duration\
 $time
-$character
+$os$character
 """
 
 # -------------------------------------------------
