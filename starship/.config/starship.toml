@@ -102,7 +102,7 @@ tag_symbol = "  "
 # -------------------------------------------------
 
 # Programming Languages
-[c] symbol = " "
+["c"] symbol = " "
 [crystal] symbol = " "
 [dart] symbol = " "
 [elixir] symbol = " "
