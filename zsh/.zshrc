@@ -77,3 +77,4 @@ alias cargohammer='cargo clean && cargo build && cargo run'
 alias venvhammer='python3 -m venv venv && source ~/venv/bin/activate'
 alias tm=new_tmux
 
+eval "$(starship init zsh)"
