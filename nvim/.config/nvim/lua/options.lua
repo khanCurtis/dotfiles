@@ -71,4 +71,13 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
+-- Number of spaces a <Tab> counts for
+vim.opt.tabstop = 4
+
+-- Number of spaces for autoindent
+vim.opt.shiftwidth = 4
+
+-- Use spaces instead of real tab characters
+vim.opt.expandtab = true
+
 -- vim: ts=2 sts=2 sw=2 et
