@@ -93,4 +93,6 @@ require('lazy').setup({
   },
 })
 
+require 'custom.cwd'
+
 -- vim: ts=2 sts=2 sw=2 et
