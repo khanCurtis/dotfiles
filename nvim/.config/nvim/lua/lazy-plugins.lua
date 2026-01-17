@@ -10,9 +10,9 @@
 --
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
- 
+
   require 'plugins.init',
-  
+
   require 'plugins.autopairs',
   require 'plugins.blink-cmp',
   require 'plugins.conform',
@@ -25,14 +25,15 @@ require('lazy').setup({
   require 'plugins.lspconfig',
   require 'plugins.mini',
   require 'plugins.neo-tree',
+  require 'plugins.none-ls',
   require 'plugins.telescope',
   require 'plugins.todo-comments',
   require 'plugins.treesitter',
   require 'plugins.vimbegood',
   require 'plugins.which-key',
- 
+
   -- 'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
-  
+
   -- Load Omarchy’s generated Neovim theme
   dofile(vim.fn.expand '~/.config/omarchy/current/theme/neovim.lua'),
 }, {
