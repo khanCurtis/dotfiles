@@ -16,6 +16,7 @@ require('lazy').setup({
   require 'plugins.autopairs',
   require 'plugins.blink-cmp',
   require 'plugins.conform',
+  require 'plugins.dashboard',
   require 'plugins.debug',
   require 'plugins.devicons',
   require 'plugins.fterm',
