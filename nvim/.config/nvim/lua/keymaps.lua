@@ -44,6 +44,10 @@ vim.keymap.set('n', '<leader><CR>', '<cmd>lua ToggleFloatTerminal()<CR>', {
   silent = true,
 })
 
+vim.keymap.set('n', '<leader>gf', function()
+  vim.lsp.buf.format { async = true }
+end, { desc = 'Format File' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
