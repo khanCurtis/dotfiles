@@ -34,7 +34,7 @@ require('lazy').setup({
 
   -- 'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
-  { import = 'lazyvim.plugins.extras.lsp.none-ls' },
+  --FIXME { import = 'lazyvim.plugins.extras.lsp.none-ls' },
 
   -- Load Omarchy’s generated Neovim theme
   dofile(vim.fn.expand '~/.config/omarchy/current/theme/neovim.lua'),
