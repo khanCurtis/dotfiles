@@ -33,7 +33,7 @@ setopt inc_append_history
 # Eval
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
-
+eval $(thefuck --alias)
 # fzf key bindings and completion
 source <(fzf --zsh)
 
