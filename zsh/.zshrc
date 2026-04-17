@@ -68,7 +68,7 @@ new_tmux () {
 }
 
 # Aliases
-alias ls='exa --icons -F -H --group-directories-first --git'
+alias ls='eza --icons -F -H --group-directories-first --git'
 alias ll='eza -al --icons'
 alias lt='eza -a --tree --level=1 --icons'
 alias vi="nvim"
